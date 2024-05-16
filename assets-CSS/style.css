@@ -1,0 +1,11 @@
+.cella {
+    display: inline-block;
+    width: 5%;
+    height: 50px;
+    position: relative;
+    border: 1px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    text-align: center;
+    l
+  }
