@@ -24,9 +24,13 @@ const createCelleTombola = (celle) => {
   sezione.appendChild(estrazione);
   //creazione evento dell'avvio estrazione
   estrazione.addEventListener("click", function (evento) {
-    const randomNumber = Math.floor(Math.random() * 76);
-    console.log(randomNumber);
-    numeriCasuli.push(randomNumber);
+    const randomNumber = () => {
+      const random = Math.floor(Math.random() * 76);
+      console.log(randomNumber);
+
+      if (random !== 0 && numeriCasuli.includes(random)) return randomNumber();
+      else numeriCasuli.push(random);
+    };
   });
 };
 console.log(numeriCasuli);
